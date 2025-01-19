@@ -10,6 +10,8 @@ def is_prime(n: int)->bool:
 assert is_prime(13)
 assert not is_prime(15)
 
+# using this video pretty heavily: https://www.youtube.com/watch?v=s0DlJz74EKs
+
 def brute_force(): 
     best = 0 
     best_prod = 0 
