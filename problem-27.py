@@ -1,3 +1,4 @@
+from tqdm import tqdm
 
 def is_prime(n: int)->bool: 
     if n <= 1: 
@@ -15,7 +16,7 @@ assert not is_prime(15)
 def brute_force(): 
     best = 0 
     best_prod = 0 
-    for a in range(-999, 1000): 
+    for a in tqdm(range(-999, 1000)): 
         for b in range(1, 1001): 
             n = 0
             while is_prime(n ** 2 + (a * n) + b):
@@ -25,4 +26,4 @@ def brute_force():
                 best_prod = a * b 
     return best_prod
 
-print(brute_force())
+print(brute_force())     
