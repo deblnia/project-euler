@@ -22,6 +22,7 @@ mx = 0
 for k in range(1, 10_000): 
 	for n in range(2, 10): 
 		p_str = concatenate_products(k, n) 
+		# can only be 9 digits 	
 		if len(p_str) > 9:
 			break
 		if is_pandigital(p_str) and int(p_str) > mx:
